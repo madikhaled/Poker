@@ -219,13 +219,13 @@ public class HandRank {
                 .collect(Collectors.toList());
     }
     private int compareHighCardValues(List<CardValue> thisHighCards, List<CardValue> otherHighCards) {
-        // Trier les listes de cartes hautes dans l'ordre décroissant
+
         List<CardValue> sortedThisHighCards = new ArrayList<>(thisHighCards);
         Collections.sort(sortedThisHighCards, Collections.reverseOrder());
         List<CardValue> sortedOtherHighCards = new ArrayList<>(otherHighCards);
         Collections.sort(sortedOtherHighCards, Collections.reverseOrder());
 
-        // Comparer les cartes hautes une par une
+
         for (int i = 0; i < sortedThisHighCards.size(); i++) {
             int comparison = sortedThisHighCards.get(i).compareTo(sortedOtherHighCards.get(i));
             if (comparison != 0) {
@@ -233,7 +233,7 @@ public class HandRank {
             }
         }
 
-        // Si toutes les cartes hautes sont égales, retourner 0
+
         return 0;
     }
 
@@ -282,7 +282,7 @@ public class HandRank {
             return comparison;
         }
 
-        // Comparez les cartes hautes restantes
+
         List<CardValue> thisHighCards = getRemainingValues(thisValueCount, 2);
         List<CardValue> otherHighCards = getRemainingValues(otherValueCount, 2);
 

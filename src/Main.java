@@ -36,15 +36,15 @@ public class Main {
         PokerHand winningHand = hands.get(0);
         HandStrength winningHandType = winningHand.determineHand();
 
-        // Write the sorted hands and their combinations to output.txt
+
         try (PrintWriter writer = new PrintWriter(new FileWriter("output.txt"))) {
-            // Print the winning hand
+
             writer.println("Winning hand: \n" + winningHand);
             writer.println("Winning hand type: " + winningHandType);
             writer.println();
 
             for (PokerHand hand : hands) {
-                HandStrength handType = hand.determineHand(); // Use determineHand method to get hand type
+                HandStrength handType = hand.determineHand();
                 writer.println(hand);
                 writer.println("Hand type: " + handType);
                 writer.println();

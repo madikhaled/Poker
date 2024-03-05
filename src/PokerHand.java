@@ -13,7 +13,7 @@ public class PokerHand implements Hand, Comparable<PokerHand>{
         this.cards = parseCards(hand);
     }
 
-    private List<Card> parseCards(String hand) {// la methode parseCards prend en parametre une chaine de caractere hand pour la transformer en liste de cartes
+    private List<Card> parseCards(String hand) {
         List<Card> parsedCards = new ArrayList<>();
         String[] cardStrings = hand.split(" ");
         for (String cardString : cardStrings) {
